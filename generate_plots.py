@@ -160,7 +160,7 @@ def plot_boxplot(sensor_a, sensor_b, ax):
 def main():
     """Generate sensor data and create publication-quality plots.
 
-    Generates synthetic sensor data, creates a 1x3 subplot figure with
+    Generates synthetic sensor data, creates a 2x2 subplot figure with
     scatter plot, histogram, and box plot, and saves the figure as PNG.
 
     Parameters
@@ -172,12 +172,18 @@ def main():
     None
     """
     sensor_a, sensor_b, timestamps = generate_data(876)
-    fig, axs = plt.subplots(1, 3, figsize=(15, 5))
-    plot_scatter(sensor_a, sensor_b, timestamps, axs[0])
-    plot_histogram(sensor_a, sensor_b, axs[1])
-    plot_boxplot(sensor_a, sensor_b, axs[2])
+    fig, axs = plt.subplots(2, 2, figsize=(12, 10))
+
+    plot_scatter(sensor_a, sensor_b, timestamps, axs[0, 0])
+    plot_histogram(sensor_a, sensor_b, axs[0, 1])
+    plot_boxplot(sensor_a, sensor_b, axs[1, 0])
+
+    axs[1, 1].axis('off')
+
     plt.tight_layout()
     plt.savefig('sensor_analysis.png', dpi=150, bbox_inches='tight')
+    plt.show()
+
 
 if __name__ == '__main__':
     main()
