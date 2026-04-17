@@ -41,4 +41,4 @@ The script produces `sensor_analysis.png`, a figure containing three subplots:
 
 ## AI Tools Used and Disclosure
 
-[Placeholder: Describe the AI tools used to generate this project, including GitHub Copilot and any other asistants.]
+I used GitHub Copilot and ChatGPT to help draft code, docstrings, commit messages, and command-line steps for this lab. I reviewed, tested, and edited the generated output before submitting. All final code and documentation were checked by me to make sure I understood every line.
